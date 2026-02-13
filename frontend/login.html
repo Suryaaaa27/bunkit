@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - BUNKIT</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-container">
+      <div class="auth-card">
+        <!-- Logo -->
+        <div class="auth-logo">
+          <div class="logo-text">BUNKIT</div>
+          <div class="logo-tagline">your hostel's mini marketplace</div>
+        </div>
+
+        <!-- Header -->
+        <div class="auth-header">
+          <h2>Welcome Back! 💜</h2>
+          <p>Login to continue selling and shopping</p>
+        </div>
+
+        <!-- Error Alert (Hidden by default) -->
+        <div id="errorAlert" class="alert alert-error hidden"></div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form">
+          <!-- Email Input -->
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📧</span>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="has-icon"
+                placeholder="your.email@example.com"
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔒</span>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="has-icon"
+                placeholder="Enter your password"
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary auth-submit" id="loginBtn">
+            <span>Login</span>
+          </button>
+        </form>
+
+        <!-- Footer -->
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/auth.js"></script>
+</body>
+</html>

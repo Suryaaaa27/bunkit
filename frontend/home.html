@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUNKIT - Your Hostel's Mini Marketplace</title>
+
+  <!-- Professional Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <!-- Minimal layout improvements -->
+  <style>
+    body{
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="home.html" class="header-logo">
+          <div>
+            <div class="header-logo-text">BUNKIT</div>
+            <span class="header-tagline">your hostel's mini marketplace</span>
+          </div>
+        </a>
+
+        <!-- Profile Button -->
+        <a href="profile.html" class="profile-btn" title="My Profile">
+          👤
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+  <!-- Categories Section -->
+  <section class="categories-section">
+    <h2 class="section-title">Browse Categories</h2>
+
+    <div class="categories-scroll" id="categoriesContainer">
+
+      <div class="category-item" data-category="all">
+        <div class="category-icon">
+          <img src="https://i.pinimg.com/736x/44/e8/3b/44e83b68103add3077dfc52f2e2dc76d.jpg" alt="All">
+        </div>
+        <div class="category-name">All</div>
+      </div>
+
+     <div class="category-item" data-category="handmade gifts">
+  <div class="category-icon">
+    <img src="images/handmade-gifts.jpeg" alt="Handmade gifts">
+  </div>
+  <div class="category-name">Handmade gifts</div>
+</div>
+
+
+      <div class="category-item" data-category="notes">
+        <div class="category-icon">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200" alt="Notes">
+        </div>
+        <div class="category-name">Notes</div>
+      </div>
+
+      <div class="category-item" data-category="food">
+        <div class="category-icon">
+          <img src="https://i.pinimg.com/1200x/1e/6a/c0/1e6ac037e6d1a1468be84686934e02ad.jpg" alt="Food">
+        </div>
+        <div class="category-name">Food</div>
+      </div>
+
+      <div class="category-item" data-category="services">
+        <div class="category-icon">
+          <img src="https://i.pinimg.com/736x/26/5a/c3/265ac33abb110c07dbba702a6c5a454a.jpg" alt="Services">
+        </div>
+        <div class="category-name">Services</div>
+      </div>
+
+      <div class="category-item" data-category="books">
+        <div class="category-icon">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200" alt="Books">
+        </div>
+        <div class="category-name">Books</div>
+      </div>
+
+      <div class="category-item" data-category="electronics">
+        <div class="category-icon">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200" alt="Electronics">
+        </div>
+        <div class="category-name">Electronics</div>
+      </div>
+
+      <div class="category-item" data-category="other">
+        <div class="category-icon">
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=200" alt="Other">
+        </div>
+        <div class="category-name">Other</div>
+      </div>
+
+    </div>
+  </section>
+
+
+      <!-- Products Section -->
+      <section class="products-section">
+        <h2 class="section-title">Latest Products</h2>
+        
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-grid">
+          <div class="skeleton-card">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line"></div>
+              <div class="skeleton-line short"></div>
+              <div class="skeleton-line short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line"></div>
+              <div class="skeleton-line short"></div>
+              <div class="skeleton-line short"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="productsGrid" class="products-grid hidden"></div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-products hidden">
+          <div class="empty-icon">📦</div>
+          <h3>No products yet</h3>
+          <p>Be the first to add a product!</p>
+          <a href="add-product.html" class="btn btn-primary">Add Product</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Floating Add Button -->
+  <a href="add-product.html" class="fab" title="Add Product">
+    +
+  </a>
+
+  <footer style="text-align:center;margin:30px 0;color:#777;font-size:14px;">
+    Built with ❤️ by Sneha |
+    <a href="about.html" style="color:#7c3aed;text-decoration:none;">
+      About Bunkit
+    </a>
+  </footer>
+
+  <script src="script/home.js"></script>
+</body>
+</html>
+  </style>
+</head>

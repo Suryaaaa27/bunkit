@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product - BUNKIT</title>
+  <link rel="stylesheet" href="styles/add-product.css">
+  <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+  <div class="add-product-page">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="page-header">
+        <a href="home.html" class="page-back-btn">
+          ← Back to Home
+        </a>
+        <h1>Add New Product</h1>
+        <p>List your item and start selling!</p>
+      </div>
+
+      <!-- Error Alert (Hidden by default) -->
+      <div id="errorAlert" class="alert alert-error hidden"></div>
+
+      <!-- Product Form -->
+      <form id="productForm" class="product-form">
+        <!-- Image Upload Section -->
+        <div class="image-upload-section">
+          <label class="image-upload-label">Product Image *</label>
+          <label for="imageInput" class="image-upload-area" id="imageUploadArea">
+            <input type="file" id="imageInput" accept="image/*" required>
+            <div class="upload-placeholder" id="uploadPlaceholder">
+              <span class="upload-icon">📸</span>
+              <div class="upload-text">Tap to upload image</div>
+              <div class="upload-hint">PNG, JPG or WEBP (max 5MB)</div>
+            </div>
+            <img id="imagePreview" class="image-preview" alt="Preview">
+            <button type="button" class="remove-image-btn" id="removeImageBtn">×</button>
+          </label>
+        </div>
+
+        <!-- Product Details -->
+        <div class="form-row">
+          <div class="input-group">
+            <label for="title">
+              Product Title <span class="required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="title" 
+              name="title" 
+              placeholder="e.g., Handmade Dreamcatcher"
+              maxlength="100"
+              required
+            >
+            <div class="char-counter">
+              <span id="titleCounter">0</span>/100
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row two-cols">
+          <div class="input-group">
+            <label for="category">
+              Category <span class="required">*</span>
+            </label>
+            <select id="category" name="category" class="category-select" required>
+              <option value="">Choose a category</option>
+              <option value="handmade">🎨 Handmade</option>
+              <option value="notes">📚 Notes</option>
+              <option value="tutoring">👨‍🏫 Tutoring</option>
+              <option value="services">⚡ Services</option>
+              <option value="books">📖 Books</option>
+              <option value="electronics">💻 Electronics</option>
+              <option value="other">✨ Other</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="price">
+              Price (₹) <span class="required">*</span>
+            </label>
+            <div class="price-input-wrapper">
+              <span class="currency-symbol">₹</span>
+              <input 
+                type="number" 
+                id="price" 
+                name="price" 
+                class="price-input"
+                placeholder="0"
+                min="0"
+                step="1"
+                required
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="description">
+              Description <span class="required">*</span>
+            </label>
+            <textarea 
+              id="description" 
+              name="description" 
+              placeholder="Tell buyers about your product..."
+              maxlength="500"
+              rows="5"
+              required
+            ></textarea>
+            <div class="char-counter">
+              <span id="descCounter">0</span>/500
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section">
+          <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+            <span class="submit-btn-text">
+              <span>✨</span>
+              <span>List Product</span>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Overlay -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-content">
+      <div class="success-icon">✓</div>
+      <h2>Product Listed!</h2>
+      <p>Redirecting to home...</p>
+    </div>
+  </div>
+
+  <script src="script/add-product.js"></script>
+</body>
+</html>

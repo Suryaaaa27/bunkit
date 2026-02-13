@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - BUNKIT</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+  <div class="profile-page">
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="container">
+        <div class="profile-header-content">
+          <a href="home.html" class="back-btn">← Back to Home</a>
+          
+          <div class="profile-info">
+            <div class="profile-avatar">👤</div>
+            <h1 class="profile-name" id="userName">Loading...</h1>
+            <div class="profile-email" id="userEmail">-</div>
+            <div class="profile-whatsapp" id="userWhatsapp">
+              <span>📱</span>
+              <span>-</span>
+            </div>
+
+            <div class="profile-actions">
+              <button class="logout-btn" id="logoutBtn">
+                <span>🚪</span>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Stats Section -->
+      <div class="profile-stats">
+        <div class="stat-card">
+          <div class="stat-number" id="totalAds">0</div>
+          <div class="stat-label">Total Ads</div>
+        </div>
+      </div>
+
+      <!-- My Ads Section -->
+      <section class="my-ads-section">
+        <div class="section-header">
+          <h2>My Ads</h2>
+          <a href="add-product.html" class="add-product-btn">
+            <span>+</span>
+            <span>Add Product</span>
+          </a>
+        </div>
+
+        <!-- Loading State -->
+        <div id="adsLoading" class="hidden">
+          <div class="skeleton-card">
+            <div class="skeleton-content">
+              <div class="skeleton-line"></div>
+              <div class="skeleton-line short"></div>
+              <div class="skeleton-line short"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Products Container -->
+        <div id="userProductsContainer"></div>
+
+        <!-- Empty State -->
+        <div id="emptyAds" class="empty-ads hidden">
+          <div class="empty-ads-icon">📦</div>
+          <h3>No ads yet</h3>
+          <p>Start selling by adding your first product!</p>
+          <a href="add-product.html" class="btn btn-primary">Add Your First Product</a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="deleteModal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>Delete Product?</h3>
+      <p>Are you sure you want to delete this product? This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="cancelDeleteBtn">Cancel</button>
+        <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/profile.js"></script>
+</body>
+</html>
