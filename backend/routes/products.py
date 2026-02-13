@@ -1,9 +1,9 @@
 from flask import Blueprint, request, jsonify
-from config import SECRET_KEY
-from middleware.auth_middleware import auth_required
+from backend.config import SECRET_KEY
+from backend.middleware.auth_middleware import auth_required
 from bson.objectid import ObjectId
 from datetime import datetime
-from utils.cloudinary_utils import upload_image
+from ..utils.cloudinary_utils import upload_image
 print("PRODUCTS ROUTE LOADED")
 
 

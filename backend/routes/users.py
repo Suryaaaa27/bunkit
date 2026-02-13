@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from backend.config import db
-from middleware.auth_middleware import auth_required
+from backend.middleware.auth_middleware import auth_required
 from bson.objectid import ObjectId
 
 users_bp = Blueprint("users", __name__, url_prefix="/api/users")

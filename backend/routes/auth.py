@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from backend.config import db
-from utils.auth_utils import hash_password, check_password, generate_jwt
+from ..utils.auth_utils import hash_password, check_password, generate_jwt
 from bson.objectid import ObjectId
 
 auth_bp = Blueprint("auth", __name__, url_prefix="/api/auth")

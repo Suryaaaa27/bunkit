@@ -1,10 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-from config import SECRET_KEY
-from routes.auth import auth_bp
-from routes.users import users_bp
-from routes.products import products_bp
-
+from .config import SECRET_KEY
+from .routes.auth import auth_bp
+from .routes.users import users_bp
+from .routes.products import products_bp
 
 app = Flask(__name__)
 CORS(app)
